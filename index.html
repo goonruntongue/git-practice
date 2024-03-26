@@ -1,0 +1,67 @@
+<!--Full Template-->
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        pre.prettyprint {
+            font-family: "Poppins", "Noto Sans JP", sans-serif;
+            padding: 1em;
+            padding-left: 2em;
+            border-radius: 12px;
+        }
+        
+        pre.prettyprint li {
+            list-style-type: decimal !important;
+        }
+        
+        html {
+            --fontSet: "Poppins", "Noto Sans JP", sans-serif;
+        }
+        
+        body {
+            font-family: var(--fontSet);
+        }
+    </style>
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <h1>GITの使い方</h1>
+    <pre class="prettyprint linenums">
+git clone [GITHUBで作ったリポジトリのパス（HTTPSもしくはSSH）]
+#これで、リモートリポジトリをローカルにコピーする
+
+git status
+#ローカルにコピーしたフォルダ内に移動したのち上記でステータスの確認
+
+git add .
+#全てのファイルをローカルのgitで管理下に置く（ステージング）
+
+git commit -m "コミットメッセージ"
+#未保存のファイルを保存する
+
+git push
+#リモートにアップロード
+    </pre>
+    <!--jQeury-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!--Google Code Prettify-->
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=sons-of-obsidian"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
