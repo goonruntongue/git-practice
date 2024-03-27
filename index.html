@@ -14,56 +14,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css">
-    <style>
-        pre.prettyprint {
-            font-family: "Poppins", "Noto Sans JP", sans-serif;
-            padding: 1em;
-            padding-left: 2em;
-            border-radius: 12px;
-        }
-        
-        pre.prettyprint li {
-            list-style-type: decimal !important;
-        }
-        
-        html {
-            --fontSet: "Poppins", "Noto Sans JP", sans-serif;
-        }
-        
-        body {
-            font-family: var(--fontSet);
-        }
-    </style>
+
     <title>GITの使い方</title>
     <link rel="stylesheet" href="./style.css">
 
 </head>
 
 <body>
-    <h1>GITの使い方</h1>
-    <pre class="prettyprint linenums">
+    <div class="container">
+        <h1>GITの使い方</h1>
+        <pre class="prettyprint linenums">
 </pre>
+    </div>
     <!--jQeury-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./script.js"></script>
-    <script>
-        $(document).ready(() => {
-            $.ajax({
-                type: "GET",
-                dataType: "JSON",
-                url: "data.json",
-                success: (data) => {
-                    $.each(data, (key, value) => {
-                        $("pre").append(key + "\n" + value + "\n\n");
-                    });
-                    // AJAXコールバックの成功後にGoogle Code Prettifyを動的にロード
-                    setTimeout(() => {
-                        $.getScript("https://cdn.jsdelivr.net/gh/google/code-prettify/loader/run_prettify.js?skin=sons-of-obsidian");
-                    }, 10);
-                }
-            });
-        });
-    </script>
+
 
 </body>
 

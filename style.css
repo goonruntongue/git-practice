@@ -1,0 +1,35 @@
+pre.prettyprint {
+    font-family: "Poppins", "Noto Sans JP", sans-serif;
+    padding: 1em;
+    padding-left: 2em;
+    border-radius: 12px;
+}
+
+pre.prettyprint li {
+    list-style-type: decimal !important;
+}
+
+html {
+    --fontSet: "Poppins", "Noto Sans JP", sans-serif;
+}
+
+body {
+    font-family: var(--fontSet);
+}
+
+pre.prettyprint.linenums.prettyprinted {
+    padding-left: 0 !important;
+}
+
+.container {
+    width: min(1024px, 96%);
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0.5em 0;
+}
+
+pre {
+    margin-top: 0 !important;
+}
