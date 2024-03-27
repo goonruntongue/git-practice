@@ -49,24 +49,22 @@
     <script>
         $(document).ready(() => {
             $.ajax({
-                type: "GET", // ここを 'data: "GET",' から修正しました。
+                type: "GET",
                 dataType: "JSON",
                 url: "data.json",
                 success: (data) => {
                     $.each(data, (key, value) => {
                         $("pre").append(key + "\n" + value + "\n\n");
                     });
-                    // AJAXコールバックの成功後にprettyPrintを実行
+                    // AJAXコールバックの成功後にGoogle Code Prettifyを動的にロード
                     setTimeout(() => {
-                        // Google Code Prettifyを動的にロード
-                        $.getScript("https://cdn.jsdelivr.net/gh/google/code-prettify/loader/run_prettify.js?skin=sons-of-obsidian", function() {
-                            prettyPrint(); // コンテンツが完全にロードされた後に実行
-                        });
+                        $.getScript("https://cdn.jsdelivr.net/gh/google/code-prettify/loader/run_prettify.js?skin=sons-of-obsidian");
                     }, 10);
                 }
             });
         });
     </script>
+
 </body>
 
 </html>
