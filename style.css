@@ -33,3 +33,33 @@ h1 {
 pre {
     margin-top: 0 !important;
 }
+
+.copy::after {
+    content: "\f0c5";
+    font-family: "FontAwesome";
+    margin-left: 1em;
+    color: #fff;
+}
+
+.copy:hover::after {
+    color: coral;
+}
+
+.copy {
+    position: relative;
+}
+
+.copy::before {
+    z-index: 1;
+    position: absolute;
+    content: "copied!";
+    top: 0;
+    left: 0;
+    transform: translate(0, -100%);
+    color: #ff0;
+    display: none;
+}
+
+.copy.on::before {
+    display: block;
+}
