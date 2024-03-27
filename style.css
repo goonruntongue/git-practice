@@ -58,6 +58,7 @@ pre {
     transform: translate(0, -100%);
     color: #ff0;
     display: none;
+    white-space: no-wrap;
 }
 
 .copy.on::before {
