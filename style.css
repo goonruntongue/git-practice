@@ -63,3 +63,8 @@ pre {
 .copy.on::before {
     display: block;
 }
+
+pre {
+    word-break: break-all;
+    white-space: pre-wrap;
+}
