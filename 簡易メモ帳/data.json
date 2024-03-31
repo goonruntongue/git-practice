@@ -1,0 +1,5 @@
+{
+    "php": "&lt?php\nif (isset($_POST[\"comment\"])) {\n    $comment = \"&lt;p&gt;\" . nl2br($_POST[\"comment\"]) . \"&lt;/p&gt;\";\n    file_put_contents(\"data.txt\", $comment, FILE_APPEND);\n    echo file_get_contents(\"data.txt\");\n} else {\n    echo file_get_contents(\"data.txt\");\n}",
+    "js": "$(document).ready(function() {\n    $.get(\"server.php\", function(data) {\n        $(\"#result\").append(data);\n    })\n});\n\n$(\"form\").on(\"submit\", function(e) {\n    e.preventDefault();\n    let formData = $(this).serialize();\n    $.ajax({\n        type: \"POST\",\n        data: formData,\n        url: \"server.php\",\n        success: function(data) {\n            $(\"#result\").empty().append(data);\n            $(\"textarea\").val(\"\").focus();\n        }\n    })\n})}",
+    "html": "&lt;form action=\"backend.php\" method=\"POST\"&gt;\n    &lt;textarea name=\"comment\"&gt;&lt;/textarea&gt;\n    &lt;input type=\"submit\" value=\"書き込み\"&gt;\n&lt;/form&gt;\n&lt;div id=\"result\"&gt;&lt;/div&gt;"
+}

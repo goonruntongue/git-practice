@@ -1,0 +1,115 @@
+html {
+    --fontSet: "Poppins", "Noto Sans JP", sans-serif;
+}
+
+body,
+pre,
+* {
+    font-family: var(--fontSet);
+}
+
+body {
+    margin: 0;
+}
+
+.prettyprint,
+.prettyprint ol {
+    padding: 0 !important;
+    border-radius: 6px !important;
+}
+
+.prettyprint ol {
+    padding: 1.5em 2.5em !important;
+}
+
+.prettyprint {
+    margin: 1em auto 0;
+}
+
+.content {
+    width: min(90%, 960px);
+    margin: 0 auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 100%;
+    height: 300px;
+    display: block;
+    margin: 1em auto;
+}
+
+.code {
+    position: relative;
+}
+
+.code i {
+    position: absolute;
+    bottom: 1.5em;
+    right: 1.5em;
+    color: #fff;
+    cursor: pointer;
+}
+
+.code i:hover {
+    color: coral;
+}
+
+#result p:nth-of-type(odd) {
+    background: #393f4b;
+    color: #fff;
+}
+
+#result p:nth-of-type(even) {
+    background: #dbd3ff;
+}
+
+#result p {
+    margin: 0;
+    padding: 1.5em
+}
+
+#result {
+    margin-top: 1.5em;
+}
+
+#result p {
+    border-radius: 10px;
+    margin: .5em 0;
+    position: relative;
+    margin-top: 2em;
+}
+
+#result p::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    clip-path: polygon(50% 0%, 100% 100%, 0 100%);
+    top: -18px;
+    left: 18px;
+}
+
+#result p:nth-of-type(odd)::after {
+    background: #393f4b;
+}
+
+#result p:nth-of-type(even)::after {
+    background: #dbd3ff;
+}
+
+span.ofCode {
+    font-size: 0.9em;
+}
+
+h1 {
+    margin-bottom: 0
+}
+
+.prettyprint {
+    margin-top: 0.5em;
+}

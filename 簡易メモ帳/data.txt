@@ -1,0 +1,21 @@
+<p>書き込みができた模様です<br />
+これはファイルを一つに限定し、その中に文字を書き込む掲示板コードです。<br />
+動作の核は<br />
+ >フロントエンド側の<br />
+    $.get("URL",コールバック関数);<br />
+    $ajax({<br />
+         type:"POST",<br />
+         url:"URL",<br />
+         data:formData,<br />
+         success:コールバック関数      <br />
+    });<br />
+<br />
+>バックエンド側の<br />
+    file_put_contents("data.txt",書き込む文字,FILE_APPEND);<br />
+    nl2br関数<br />
+    file_get_contents("data.txt")<br />
+<br />
+です</p><p>また<br />
+&nbsp;&nbsp;&nbsp;&nbsp;str_replace("&nbsp;","&nbsp",$_POST["comment"]);<br />
+とすることで、半角スペースを&nbsp;の実態参照に変換すれば、半角スペースを維持して文字列を書き込めそうです。</p><p>できました<br />
+　　str_replace("置換前の文字","置換後の文字",置換したい文字列全体);</p><p>Dockerとcaproverの使い方を覚えれば、無料で小規模のphpアプリをデプロイできそうです。</p>
